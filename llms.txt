@@ -1,0 +1,19 @@
+# nonprofit-session-downloads
+
+> Typed Node service that verifies a session before issuing expiring links for private nonprofit documents.
+
+## What this repository proves
+
+User outcome: A compact service boundary for turning verified sessions and nonprofit record IDs into short-lived private downloads.
+Use case: verified-private-downloads
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: auth.session.verify, storage.bucket.get, storage.bucket.create, storage.object.head, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `test/download_access.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

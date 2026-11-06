@@ -1,0 +1,25 @@
+{
+  "name": "nonprofit-session-downloads",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/nonprofit_download_server.ts",
+    "start": "tsx src/nonprofit_download_server.ts",
+    "setup:demo": "tsx scripts/prepare_demo_files.ts",
+    "test": "tsx --test test/download_access.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck"
+  },
+  "dependencies": {
+    "tsx": "^4.19.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
